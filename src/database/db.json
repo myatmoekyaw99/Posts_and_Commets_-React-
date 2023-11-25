@@ -1,0 +1,18 @@
+{
+    "users" : [
+        {
+            "name" : "mg mg",
+            "email": "mgmg@gmail.com",
+            "phone_number": "09-456544998",
+            "profile_url":"https://images.pexels.com/photos/4069292/pexels-photo-4069292.jpeg",
+            "password":"123456",
+            "created_at": "11/24/2023"
+        }
+    ],
+    "posts" : [
+
+    ],
+    "comments" : [
+
+    ]
+}

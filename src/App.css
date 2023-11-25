@@ -1,0 +1,20 @@
+html,*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ 
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#about{
+    background-image: url('https://images.pexels.com/photos/1586981/pexels-photo-1586981.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-position:center;
+    background-repeat:repeat;
+    background-size:contain;
+}
+
+blockquote::before{content:open-quote;font-size:200%}
+blockquote::after{content:close-quote;font-size: 200%;}
