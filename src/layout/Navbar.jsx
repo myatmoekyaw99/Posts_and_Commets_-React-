@@ -14,7 +14,7 @@ function Navbar() {
             </ul> */}
             <div className="flex flex-row gap-10 mr-20">
             <NavLink to="/" className="text-blue-800 hover:text-slate-900 text-sm my-1 font-bold">Home</NavLink>
-            <NavLink to="/" className="text-blue-800 hover:text-slate-900 text-sm my-1 font-bold">Feature Posts</NavLink>
+            <NavLink to="#feature-posts" className="text-blue-800 hover:text-slate-900 text-sm my-1 font-bold">Feature Posts</NavLink>
             <NavLink to="/" className="text-blue-800 hover:text-slate-900 text-sm my-1 font-bold">About</NavLink>
             <NavLink to="/" className="text-blue-800 hover:text-slate-900 text-sm my-1 font-bold">All Posts</NavLink>
             <NavLink to="/" className="text-blue-800 hover:text-slate-900 text-sm my-1 font-bold">Contact</NavLink>
