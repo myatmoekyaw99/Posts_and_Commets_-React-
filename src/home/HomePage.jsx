@@ -1,3 +1,4 @@
+import { BookOpenIcon, EnvelopeIcon, HomeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import Navbar from "../layout/Navbar";
 import AllPosts from "./AllPosts";
 import FeaturePosts from "./FeaturePosts";
@@ -11,10 +12,13 @@ function HomePage() {
                 <FeaturePosts/>
                 <About/>
                 <AllPosts/>
+                <Contact/>
             </section>
         </>
      );
 }
+
+export default HomePage;
 
 export function Welcome(){
     return(
@@ -39,4 +43,37 @@ export function About(){
     );
 }
 
-export default HomePage;
+export function Contact(){
+    return (
+        <div className="bg-gray-700 h-[300px] text-white grid grid-cols-3 gap-10 justify-between">
+            <div className="mx-20 my-10 text-sm font-serif">
+                <BookOpenIcon className="w-16 h-16 text-blue-500 font-bold">&lt;</BookOpenIcon>
+                <h1 className="inline-block text-[40px]  font-bold bg-clip-text  text-blue-500">OurBlog</h1>  
+                <p className="mt-2">&copy; 2023 coypright | OurBlog.com</p> 
+                <div className="mt-2 text-blue-500 flex flex-row">
+                    <a href="#" className="text-lg"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" className="ml-4 text-lg"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" className="ml-4 text-lg"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" className="ml-4 text-lg"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" className="ml-4 text-lg"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div className="my-10 font-serif text-sm">
+                <HomeIcon className="w-6 h-6 text-blue-500"></HomeIcon>
+                <span className=""> Address :</span>
+                <p>Block(4),Room(404),(8)Qtr,Mayangone,Yangon.</p>
+
+                <PhoneIcon className="w-6 h-6 mt-2 text-blue-500"></PhoneIcon>
+                <span className=""> Phone :</span>
+                <p>09-222443556 , 09-887997667</p>
+
+                <EnvelopeIcon className="w-6 h-6 mt-2 text-blue-500"></EnvelopeIcon>
+                <span className=""> Gmail :</span>
+                <p>ourBlog-admin@gmail.com</p>
+            </div>
+            <div className="mx-auto font-serif">
+                dvja
+            </div>
+        </div>
+    );
+}
