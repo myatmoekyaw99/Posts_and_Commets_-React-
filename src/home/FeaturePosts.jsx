@@ -20,14 +20,16 @@ export default function FeaturePosts(){
 
 export function Card(){
     return (
-        <div className="group h-auto shadow-sm shadow-slate-400 rounded-lg hover:rounded-none overflow-hidden bg-opacity-50 hover:bg-opacity-100 bg-slate-100">
-            <img  className="w-full mb-1 h-40 rounded-t-lg group-hover:rounded-none   brightness-75 hover:brightness-100 hover:scale-x-110" src="https://images.pexels.com/photos/18332225/pexels-photo-18332225/free-photo-of-young-woman-in-elegant-black-blazer-posing-outdoors-at-night.jpeg"/>
-            <h5 className="text-center text-md text-black font-mono">Title</h5>
-            {/* <p className="text-center text-slate-800 font-medium">llaffo</p> */}
-            <span className="text-slate-800 text-sm font-serif ml-2">author</span>
-            <span className="text-slate-800 text-sm font-serif mr-2 float-right">date</span>
+        <div className="group h-auto shadow-black shadow-inner rounded-lg hover:rounded-none overflow-hidden bg-opacity-50 hover:bg-opacity-100 bg-slate-100">
+            <img  className="w-full mb-1 h-40 rounded-t-lg group-hover:rounded-none brightness-75 hover:brightness-100 hover:scale-x-110" src="https://images.pexels.com/photos/18332225/pexels-photo-18332225/free-photo-of-young-woman-in-elegant-black-blazer-posing-outdoors-at-night.jpeg"/>
+            <h5 className="text-center text-md text-black font-serif font-bold">Title</h5>
             
-            <form className="w-full border-t-[1px] border-slate-400">
+            <div className="flex flex-row content-center align-middle mt-1">
+                <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?" className="w-10 h-10 ml-2 rounded-full inline-block hover:ring-1 ring-slate-400 hover:cursor-pointer"/>
+                <span className="text-black text-md font-serif ml-2">author<span className="text-slate-800 text-xs font-mono block">date</span></span>
+            </div>
+            
+            <form className="w-full border-t-[1px] mt-1 border-slate-400">
                 <button href="/detail/:id" className="m-2 px-5 ring-0 hover:ring-1 ring-inset ring-slate-500 text-slate-800 text-sm hover:font-serif hover:bg-slate-100 rounded-md hover:scale-x-110 float-right">Detail</button>
             </form>
         </div> 
