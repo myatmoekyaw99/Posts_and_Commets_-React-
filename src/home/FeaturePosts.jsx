@@ -20,7 +20,7 @@ export default function FeaturePosts(){
 
 export function Card(){
     return (
-        <div className="group h-auto shadow-black shadow-inner rounded-lg hover:rounded-none overflow-hidden bg-opacity-50 hover:bg-opacity-100 bg-slate-100">
+        <div id="feature-post" className="group h-auto shadow-black shadow-inner rounded-lg hover:rounded-none overflow-hidden bg-opacity-50 hover:bg-opacity-100 bg-slate-100">
             <img  className="w-full mb-1 h-40 rounded-t-lg group-hover:rounded-none brightness-75 hover:brightness-100 hover:scale-x-110" src="https://images.pexels.com/photos/18332225/pexels-photo-18332225/free-photo-of-young-woman-in-elegant-black-blazer-posing-outdoors-at-night.jpeg"/>
             <h5 className="text-center text-md text-black font-serif font-bold">Title</h5>
             

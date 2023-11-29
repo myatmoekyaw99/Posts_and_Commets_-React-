@@ -1,9 +1,9 @@
-import Navbar from "../layout/Navbar";
-import AllPosts from "./AllPosts";
-import FeaturePosts from "./FeaturePosts";
-import Contact from "../layout/Contact";
+import Navbar from "./Navbar";
+import AllPosts from "../home/AllPosts";
+import FeaturePosts from "../home/FeaturePosts";
+import Contact from "./Contact";
 
-function HomePage() {
+function Root() {
     return (
         <>
             <Navbar/>
@@ -20,11 +20,11 @@ function HomePage() {
      );
 }
 
-export default HomePage;
+export default Root;
 
 export function Welcome(){
     return(
-        <div className="pt-40 h-[400px] text-center border-b-2 bg-gradient-to-r from-cyan-800 from-10% via-blue-500 via-40% to-gray-900 to-90% hover:from-pink-300 hover:from-20% hover:via-cyan-500 hover:via-40% hover:to-yellow-300 hover:90%">
+        <div id="home" className="pt-40 h-[400px] text-center border-b-2 bg-gradient-to-r from-cyan-800 from-10% via-blue-500 via-40% to-gray-900 to-90% hover:from-pink-300 hover:from-20% hover:via-cyan-500 hover:via-40% hover:to-yellow-300 hover:90%">
             <h1 className="uppercase bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-lime-800 text-3xl font-extrabold">Welcome from ourBlog</h1>
             <span className="pb-2 border-b-[1px] border-b-orange-500">Share your posts with others</span>
         </div>

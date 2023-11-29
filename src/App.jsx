@@ -1,18 +1,20 @@
 import './App.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import HomePage from './home/HomePage';
 import ErrorPage from './layout/ErrorPage';
+import Root from './layout/Root';
+import Register from './users/Register';
 
 function App() {
   const router = createBrowserRouter([
     {
       path:"/",
-      element:<HomePage/>,
+      element:<Root/>,
       errorElement:<ErrorPage/>,
-      children:[
-        
-
-      ]
+    },
+    {
+      path:"/register",
+      element:<Register/>,
+      errorElement:<ErrorPage/>,
     }
     ]);
   return (

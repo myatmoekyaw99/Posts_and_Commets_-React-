@@ -2,7 +2,7 @@ import { BookOpenIcon, ChevronDoubleUpIcon, EnvelopeIcon, HomeIcon, PhoneIcon } 
 
 export default function Contact(){
     return (
-        <div className="relative bg-gray-700 h-[280px] text-white grid grid-cols-3 gap-10 justify-between">
+        <div id="contact" className="relative bg-black h-[280px] text-white grid grid-cols-3 gap-10 justify-between">
             <LeftContact/>
             <MiddleContact/>
             <RightContact/>

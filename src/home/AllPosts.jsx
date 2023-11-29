@@ -4,7 +4,7 @@ import { BellAlertIcon, BoltIcon, CameraIcon, ChatBubbleBottomCenterTextIcon, Ch
 
 function AllPosts() {
     return ( 
-        <div className="relative pt-10 pb-16 bg-slate-600">
+        <div id="all-post" className="relative pt-10 pb-16 bg-slate-600">
             <TopIconsGroup/>
             <LeftIconsGroup/>
             <RightIconsGroup/>       
@@ -97,11 +97,11 @@ export function RightIconsGroup(){
 export function PageNavigatior(){
     return (
         <div className="text-center mt-8">
-                <NavLink to="/" className="bg-slate-200 text-black hover:font-bold px-3 py-1 hover:ring-inset ring-1 ring-black">First</NavLink>
-                <NavLink to="/" className="bg-slate-200 text-black hover:font-bold px-3 py-1 hover:ring-inset ring-1 ring-black">Prev</NavLink>
-                <NavLink to="/" className="bg-slate-200 text-blue-900 font-bold hover:bg-white px-5 py-1 hover:ring-inset ring-1 ring-black">1</NavLink>
-                <NavLink to="/" className="bg-slate-200 text-black hover:font-bold px-3 py-1 hover:ring-inset ring-1 ring-black">Next</NavLink>
-                <NavLink to="/" className="bg-slate-200 text-black hover:font-bold px-3 py-1 hover:ring-inset ring-1 ring-black">Last</NavLink>
-            </div>
+            <NavLink to="/" className="bg-slate-200 text-black hover:font-bold px-3 py-1 hover:ring-inset ring-1 ring-black">First</NavLink>
+            <NavLink to="/" className="bg-slate-200 text-black hover:font-bold px-3 py-1 hover:ring-inset ring-1 ring-black">Prev</NavLink>
+            <NavLink to="/" className="bg-slate-200 text-blue-900 font-bold hover:bg-white px-5 py-1 hover:ring-inset ring-1 ring-black">1</NavLink>
+            <NavLink to="/" className="bg-slate-200 text-black hover:font-bold px-3 py-1 hover:ring-inset ring-1 ring-black">Next</NavLink>
+            <NavLink to="/" className="bg-slate-200 text-black hover:font-bold px-3 py-1 hover:ring-inset ring-1 ring-black">Last</NavLink>
+        </div>
     );
 }
