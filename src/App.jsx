@@ -4,6 +4,7 @@ import ErrorPage from './layout/ErrorPage';
 import Root from './layout/Root';
 import Register from './users/Register';
 import Login from './users/Login';
+import Detail from './posts/Detail';
 
 function App() {
   const router = createBrowserRouter([
@@ -20,6 +21,11 @@ function App() {
     {
       path:"/login",
       element:<Login/>,
+      errorElement:<ErrorPage/>,
+    },
+    {
+      path:"/detail/:id",
+      element:<Detail/>,
       errorElement:<ErrorPage/>,
     }
     ]);

@@ -1,8 +1,8 @@
 export default function FeaturePosts(){
     return (
-        <div id="feature-posts" className="pt-10 bg-slate-300">
+        <div id="feature-posts" className="w-screen pt-10 bg-slate-300 h-[400px] overflow-auto">
             <h1 className="text-center"><span className="pb-2 bg-clip-text text-blue-800 text-2xl font-bold uppercase border-b-2 border-b-blue-800 hover:border-b-slate-800">Feature Posts</span></h1>
-            <div className="w-10/12 mx-auto grid grid-cols-4 gap-5 mt-12">
+            <div className="w-[93%] h-[280px] mx-auto flex gap-1 snap-x snap-mandatory overflow-scroll no-scrollbar mt-10 my-1">
                 <Card/>
                 <Card/>
                 <Card/>
@@ -20,7 +20,7 @@ export default function FeaturePosts(){
 
 export function Card(){
     return (
-        <div id="feature-post" className="group h-auto shadow-black shadow-inner rounded-lg hover:rounded-none overflow-hidden bg-opacity-50 hover:bg-opacity-100 bg-slate-100">
+        <div id="feature-post" className="w-[250px] flex-shrink-0 group snap-start h-auto shadow-black shadow-inner rounded-lg hover:rounded-none overflow-hidden bg-opacity-50 hover:bg-opacity-100 bg-slate-100">
             <img  className="w-full mb-1 h-40 rounded-t-lg group-hover:rounded-none brightness-75 hover:brightness-100 hover:scale-x-110" src="https://images.pexels.com/photos/18332225/pexels-photo-18332225/free-photo-of-young-woman-in-elegant-black-blazer-posing-outdoors-at-night.jpeg"/>
             <h5 className="text-center text-md text-black font-serif font-bold">Title</h5>
             
@@ -29,9 +29,9 @@ export function Card(){
                 <span className="text-black text-md font-serif ml-2">author<span className="text-slate-800 text-xs font-mono block">date</span></span>
             </div>
             
-            <form className="w-full border-t-[1px] mt-1 border-slate-400">
-                <button href="/detail/:id" className="m-2 px-5 ring-0 hover:ring-1 ring-inset ring-slate-500 text-slate-800 text-sm hover:font-serif hover:bg-slate-100 rounded-md hover:scale-x-110 float-right">Detail</button>
-            </form>
+            <div className="w-full border-t-[1px] mt-1 border-slate-400">
+                <a href="/detail/:id" className="m-2 px-5 ring-0 hover:ring-1 ring-inset ring-slate-500 text-slate-800 text-sm hover:font-serif hover:bg-slate-100 rounded-md hover:scale-x-110 float-right">Detail</a>
+            </div>
         </div> 
     );
 }

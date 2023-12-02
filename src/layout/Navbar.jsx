@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
     return ( 
-        <nav className="sticky top-0 z-50 bg-white flex flex-row gap-40 justify-between align-middle w-full h-12 py-2 border border-b-[1px] border-b-blue-500 hover:border-b-gray-500 ">
+        <nav className="fixed top-0 z-50 bg-slate-100 flex flex-row gap-40 justify-between align-middle w-full h-12 py-2 border border-b-[1px] border-b-blue-500 hover:border-b-gray-500 ">
             <h3 className="max-w-[50px] text-blue-900 ml-10 hover:ml-11 text-2xl font-bold font-serif">OurBlog</h3>
             <ul className="flex flex-row gap-10 mr-20">
                 <NavLink to="/" className={({ isActive, isPending }) =>
@@ -10,7 +10,7 @@ function Navbar() {
                         ? "active text-sm my-1 font-bold"
                         : isPending
                         ? "pending"
-                        : ""
+                        : "text-sm my-1 font-bold text-blue-800 hover:text-gray-950"
                 }>Home</NavLink>  
                 <ListItem avalue="#feature-post" listvalue="Feature Posts"/>
                 <ListItem avalue="#about" listvalue="About"/>
@@ -25,7 +25,7 @@ function Navbar() {
 
 export function ListItem({avalue,listvalue}) {
     return ( 
-        <a href={avalue} className="text-blue-800 hover:text-slate-900 text-sm my-1 font-bold">
+        <a href={avalue} className="text-blue-800 hover:text-gray-900 text-sm my-1 font-bold">
             <li>{listvalue}</li>
         </a>
      );

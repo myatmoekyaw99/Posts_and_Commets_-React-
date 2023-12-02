@@ -1,18 +1,26 @@
 {
-    "users" : [
-        {
-            "name" : "mg mg",
-            "email": "mgmg@gmail.com",
-            "phone_number": "09-456544998",
-            "profile_url":"https://images.pexels.com/photos/4069292/pexels-photo-4069292.jpeg",
-            "password":"123456",
-            "created_at": "11/24/2023"
-        }
-    ],
-    "posts" : [
-
-    ],
-    "comments" : [
-
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "mg mg",
+      "email": "mgmg@gmail.com",
+      "phone_number": "09-456544998",
+      "profile_url": "https://images.pexels.com/photos/4069292/pexels-photo-4069292.jpeg",
+      "password": "123456",
+      "created_at": "2023-11-04T12:08:10.212Z"
+    },
+    {
+      "id": 2,
+      "name": "Myat Moe Kyaw",
+      "email": "myatmoekyawucsm99@gmail.com",
+      "phone_number": "9961566955",
+      "profile_url": "https://images.pexels.com/photos/4067766/pexels-photo-4067766.jpeg?auto=compress&cs=tinysrgb&w=300",
+      "password": "$2a$10$N2ITTWx2lmh0e3eZYPVk1O7tQiPHwEUbH4SVTnws3UAyxmGViqKL6",
+      "created_at": "2023-12-02T17:10:55.705Z"
+    }
+  ],
+  "posts": [
+    {}
+  ],
+  "comments": []
 }

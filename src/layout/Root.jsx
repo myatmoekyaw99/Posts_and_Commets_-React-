@@ -1,20 +1,20 @@
 import Navbar from "./Navbar";
-import AllPosts from "../home/AllPosts";
-import FeaturePosts from "../home/FeaturePosts";
+import AllPosts from "../posts/AllPosts";
+import FeaturePosts from "../posts/FeaturePosts";
 import Contact from "./Contact";
 
 function Root() {
     return (
         <>
             <Navbar/>
-            <section className="h-auto overflow-auto mt-0 border-t-[1px] bg-slate-300 scroll-smooth">
+            <section className="h-auto mt-0 border-t-[1px] bg-slate-300 overflow-hidden">
                 <Welcome/>
                 <FeaturePosts/>
                 <About/>
                 <AllPosts/>
                 <Contact/>
             </section>
-            <button id='back-to-top' className="group sticky float-right z-50 bottom-8 mr-10 p-2 w-10 h-10 stroke-1 hover:stroke-2 bg-black text-white rounded-full hover:scale-x-105 ring-1 ring-transparent" onClick={()=>backToTop()}>
+            <button id='back-to-top' className="group fixed right-5 z-50 bottom-8 mr-10 p-2 w-10 h-10 stroke-1 hover:stroke-2 bg-black text-white rounded-full hover:scale-x-105 ring-1 ring-transparent" onClick={()=>backToTop()}>
                 <i class="fa-solid fa-arrow-up"></i></button>
         </>
      );
