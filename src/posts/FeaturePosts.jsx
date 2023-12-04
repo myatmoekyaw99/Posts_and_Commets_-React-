@@ -1,8 +1,14 @@
-export default function FeaturePosts(){
+export default function FeaturePosts({posts}){
+
+    // const feature_posts = posts.sort((function(a,b){
+    //     return new Date(b.created_at) - new Date(a.created_at);
+    // })).slice(0,10);
+    //  console.log(feature_posts);
+
     return (
-        <div id="feature-posts" className="w-screen pt-10 bg-slate-300 h-[400px] overflow-auto">
+        <div id="feature-posts" className="w-screen h-[450px] py-10 bg-slate-100 overflow-auto">
             <h1 className="text-center"><span className="pb-2 bg-clip-text text-blue-800 text-2xl font-bold uppercase border-b-2 border-b-blue-800 hover:border-b-slate-800">Feature Posts</span></h1>
-            <div className="w-[93%] h-[280px] mx-auto flex gap-1 snap-x snap-mandatory overflow-scroll no-scrollbar mt-10 my-1">
+            <div className="w-[93%] h-[280px] mx-auto flex gap-2 snap-x snap-mandatory overflow-scroll no-scrollbar mt-10 my-1">
                 <Card/>
                 <Card/>
                 <Card/>
@@ -20,7 +26,7 @@ export default function FeaturePosts(){
 
 export function Card(){
     return (
-        <div id="feature-post" className="w-[250px] flex-shrink-0 group snap-start h-auto shadow-black shadow-inner rounded-lg hover:rounded-none overflow-hidden bg-opacity-50 hover:bg-opacity-100 bg-slate-100">
+        <div id="feature-post" className="w-[245px] flex-shrink-0 group snap-start h-auto shadow-black shadow-inner rounded-lg hover:rounded-none overflow-hidden bg-opacity-50 hover:bg-opacity-100 bg-slate-200">
             <img  className="w-full mb-1 h-40 rounded-t-lg group-hover:rounded-none brightness-75 hover:brightness-100 hover:scale-x-110" src="https://images.pexels.com/photos/18332225/pexels-photo-18332225/free-photo-of-young-woman-in-elegant-black-blazer-posing-outdoors-at-night.jpeg"/>
             <h5 className="text-center text-md text-black font-serif font-bold">Title</h5>
             

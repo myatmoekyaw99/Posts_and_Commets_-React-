@@ -2,7 +2,7 @@ import { BookOpenIcon, ChevronDoubleUpIcon, EnvelopeIcon, HomeIcon, PhoneIcon } 
 
 export default function Contact(){
     return (
-        <div id="contact" className="relative bg-black h-[280px] text-white grid grid-cols-3 gap-10 justify-between">
+        <div id="contact" className="relative bg-black h-[290px] text-white grid grid-cols-3 gap-10 justify-between">
             <LeftContact/>
             <MiddleContact/>
             <RightContact/>
@@ -13,16 +13,16 @@ export default function Contact(){
 /////Left side of contact section/////
 export function LeftContact(){
     return (
-        <div className="mx-20 mt-20 mb-10 text-sm font-serif group">
+        <div className="mx-20 mt-16 mb-10 text-sm font-serif group">
             <BookOpenIcon className="w-16 h-16 text-blue-500 font-bold group-hover:text-blue-800">&lt;</BookOpenIcon>
             <h1 className="inline-block text-[40px]  font-bold bg-clip-text  text-blue-500 group-hover:text-white">OurBlog</h1>  
             <p className="mt-2 hover:text-blue-500">&copy; 2023 coypright | OurBlog.com</p> 
             <div className="mt-2 text-blue-500 flex flex-row">
-                <a href="#" className="text-lg hover:text-white"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" className="ml-4 text-lg hover:text-white"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" className="ml-4 text-lg hover:text-white"><i class="fa-brands fa-github"></i></a>
-                <a href="#" className="ml-4 text-lg hover:text-white"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#" className="ml-4 text-lg hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" className="text-lg hover:text-white"><i className="fa-brands fa-facebook"></i></a>
+                <a href="#" className="ml-4 text-lg hover:text-white"><i className="fa-brands fa-linkedin"></i></a>
+                <a href="#" className="ml-4 text-lg hover:text-white"><i className="fa-brands fa-github"></i></a>
+                <a href="#" className="ml-4 text-lg hover:text-white"><i className="fa-brands fa-twitter"></i></a>
+                <a href="#" className="ml-4 text-lg hover:text-white"><i className="fa-brands fa-instagram"></i></a>
             </div>
         </div>
     );
@@ -31,17 +31,17 @@ export function LeftContact(){
 /////middle part of contact section/////
 export function MiddleContact(){
     return (
-        <div className="mt-14 mb-10 font-serif text-sm">
+        <div className="mt-10 font-serif text-sm">
             <HomeIcon className="w-6 h-6 text-blue-500"></HomeIcon>
-            <span className=""> Address :</span>
+            <span className="hover:text-blue-500"> Address :</span>
             <p>Block(4),Room(404),(8)Qtr,Mayangone,Yangon.</p>
 
             <PhoneIcon className="w-6 h-6 mt-2 text-blue-500"></PhoneIcon>
-            <span className=""> Phone :</span>
+            <span className="hover:text-blue-500"> Phone :</span>
             <p>09-222443556 , 09-887997667</p>
 
             <EnvelopeIcon className="w-6 h-6 mt-2 text-blue-500"></EnvelopeIcon>
-            <span className=""> Gmail :</span>
+            <span className="hover:text-blue-500"> Gmail :</span>
             <p>ourBlog-admin@gmail.com</p>
         </div>
     );
@@ -51,7 +51,7 @@ export function MiddleContact(){
 /////right side of contact section/////
 export function RightContact(){
     return (
-        <div className="mt-16 mb-10 text-sm font-serif">
+        <div className="mt-14 mb-10 text-sm font-serif">
             <h2 className="text-2xl text-blue-500 hover:text-white">Page Contents</h2>
             <div className="mt-2">
                 <a href="#feature-posts" className="mr-2 hover:text-blue-500">Feature Posts</a>

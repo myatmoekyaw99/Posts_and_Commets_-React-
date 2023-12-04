@@ -2,20 +2,18 @@ import Navbar from "../layout/Navbar";
 
 function Detail() {
     return ( 
-        <>
-        <Navbar/>
-        <div className="flex flex-row gap-2 w-full mt-14 h-[90vh] bg-dark-800 text-blue-600 overflow-hidden">
+        <div className="flex flex-row gap-2 w-full mt-1 h-[90vh] bg-dark-800 text-blue-600 overflow-hidden">
             <div className="basis-1/3">
             <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?" className="w-[90%] h-[90%] mx-auto mt-2 rounded-md hover:ring-1 ring-white hover:cursor-pointer shadow-sm shadow-white"/>
             <h1 className="text-white text-center font-bold text-xl mt-2">Title</h1>
             </div>
-            <div className="basis-1/3 bg-zinc-800 shadow-sm shadow-black no-scrollbar h-full overflow-y-scroll rounded-lg">
+            <div className="basis-1/3 bg-zinc-800 mt-2 shadow-sm shadow-black no-scrollbar h-full overflow-y-scroll rounded-lg">
                 <div className="flex flex-row content-center align-middle m-2">
                     <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?" className="w-10 h-10 ml-2 rounded-full inline-block hover:ring-1 ring-slate-400 hover:cursor-pointer"/>
                     <span className="text-white text-md font-serif ml-2">author<span className="text-white text-xs font-mono block">date</span></span>
                 </div>
                 <div className="m-2">
-                    <p className="text-white ml-2 mt-2 mb-4 text-clip">
+                    <p className="text-white text-sm ml-2 mt-2 mb-4 text-clip">
                     Web Developer လုပ်လိုသူများအတွက် အထူး သင့်တော်သော အတန်း ဖြစ်ပါတယ်။ FrontEnd ရော BackEnd ပါ Project ရေးနိုင်သည် အထိ သင်ကြားမည့် အတန်း ဖြစ်ပါတယ်။ ” 
 🥇ယခု Diploma in Web Development အတန်းသည် Google Class Room  ဖြင့် Recorded သင်မှာ ဖြစ်ပြီး  ပုံမှန် သင်တန်းကာလ ၆ လ ကြာမြင့် ပါမည်။ လေ့လာ ဖူးသူများ အတွက် ပိုလည်း မြန်နိုင်သလို ယခု မှ စတင် လေ့လာ မည့် Beginner များ အတွက်တော့ အချိန် ပိုလည်း ကြာနိုင်ပါတယ်။ သို့သော် သင်တန်းကိုတော့ မတတ်မချင်း လေ့လာ သူယူ နိုင်ဖို့ Life Time Access ပေးထားပါတယ်ဗျ။ 
 🥇 လုံးဝ Beginner များ အဆင်ပြေစေရန် HTML , CSS , JavaScript , React , PHP တို့ကို အခြေခံ မှ စတင်ကာ ကိုယ်ပိုင် projects များ ရေးနိုင် သွားသည် အထိ သင်ကြား ပေးမှာ ဖြစ်ပါတယ်။
@@ -45,7 +43,6 @@ function Detail() {
                 </div>
             </div>
         </div>
-        </>
      );
 }
 

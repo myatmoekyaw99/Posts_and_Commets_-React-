@@ -30,11 +30,11 @@ function Login() {
         const user = users.filter((user) =>
             formData.email === user.email );
 
-        // console.log(user[0].password);
         ///to match password///
         if(bcrypt.compareSync(formData.password,user[0].password)){
             localStorage.setItem('login_user',JSON.stringify(user[0]));
             setIsSubmit(false);
+            alert('Login successful!')
             navigate('/');
         }else{
             alert("Password doesn't match");

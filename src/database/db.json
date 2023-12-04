@@ -20,7 +20,146 @@
     }
   ],
   "posts": [
-    {}
+    {
+      "id": 1,
+      "user_id":1,
+      "title":"ajkfakoiaofieoijiajeoi",
+      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-02-02T17:09:55.705Z"
+    },
+    {
+      "id": 2,
+      "user_id":1,
+      "title":"ajkfakoiaofffieoijiajeoi",
+      "body":"ffjjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-03-02T15:09:55.705Z"
+    },
+    {
+      "id": 3,
+      "user_id":1,
+      "title":"ajkfakoiaofieoijiajeoi",
+      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-03-01T17:09:55.705Z"
+    },
+    {
+      "id": 4,
+      "user_id":2,
+      "title":"ajfakoiaofieoijiajeoi",
+      "body":"jjaofiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-04-09T17:09:58.705Z"
+    },
+    {
+      "id": 5,
+      "user_id":2,
+      "title":"ajkaofieoijiajeoi",
+      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-03-02T12:09:55.705Z"
+    },
+    {
+      "id": 6,
+      "user_id":1,
+      "title":"akfakoiaofieoijiajeoi",
+      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-05-02T17:09:55.705Z"
+    },
+    {
+      "id": 7,
+      "user_id":2,
+      "title":"ajkfakoiaofffieoijiajeoi",
+      "body":"ffjjaofjoi ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-04-02T05:09:55.705Z"
+    },
+    {
+      "id": 8,
+      "user_id":2,
+      "title":"ofieoijiajeoi",
+      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-04-01T17:11:55.705Z"
+    },
+    {
+      "id": 9,
+      "user_id":2,
+      "title":"ajfakoiaofieoijiajeoi",
+      "body":"jjaofiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-06-09T17:09:58.705Z"
+    },
+    {
+      "id": 10,
+      "user_id":2,
+      "title":"kaofieoijiajeoi",
+      "body":"fjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-05-02T10:09:55.705Z"
+    },
+    {
+      "id": 11,
+      "user_id":1,
+      "title":"ajkfakoiaofieoijiajeoi",
+      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-02-02T17:09:55.705Z"
+    },
+    {
+      "id": 12,
+      "user_id":1,
+      "title":"ajkfakoiaofffieoijiajeoi",
+      "body":"ffjjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-03-02T15:09:55.705Z"
+    },
+    {
+      "id": 13,
+      "user_id":1,
+      "title":"ajkfakoiaofieoijiajeoi",
+      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-03-01T17:09:56.705Z"
+    },
+    {
+      "id": 14,
+      "user_id":2,
+      "title":"ajfakoiaofieoijiajeoi",
+      "body":"jjaofiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-04-09T17:09:58.705Z"
+    },
+    {
+      "id": 15,
+      "user_id":2,
+      "title":"ajkaofieoijiajeoi",
+      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-04-02T12:07:55.705Z"
+    },
+    {
+      "id": 16,
+      "user_id":2,
+      "title":"akfakoiaofieoijiajeoi",
+      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-05-02T17:09:55.705Z"
+    },
+    {
+      "id": 17,
+      "user_id":2,
+      "title":"ajkfakoiaofffieoijiajeoi",
+      "body":"ffjjaofjoi ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-05-02T05:04:55.705Z"
+    },
+    {
+      "id": 18,
+      "user_id":2,
+      "title":"ofieoijiajeoi",
+      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-06-01T17:13:55.705Z"
+    },
+    {
+      "id": 19,
+      "user_id":1,
+      "title":"ajfakoiaofieoijiajeoi",
+      "body":"jjaofiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-07-09T17:11:58.705Z"
+    },
+    {
+      "id": 20,
+      "user_id":1,
+      "title":"kaofieoijiajeoi",
+      "body":"fjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "created_at":"2023-05-12T10:09:55.705Z"
+    }
   ],
   "comments": []
 }
