@@ -2,164 +2,215 @@
   "users": [
     {
       "id": 1,
-      "name": "mg mg",
+      "name": "Mg Mg",
       "email": "mgmg@gmail.com",
       "phone_number": "09-456544998",
       "profile_url": "https://images.pexels.com/photos/4069292/pexels-photo-4069292.jpeg",
-      "password": "123456",
+      "password": "$2a$08$sPbbDmqu9kqdi9.MtvdXNuBnw8XfhNAjs.38iDPVHzqy.pqzc7RBm",
       "created_at": "2023-11-04T12:08:10.212Z"
     },
     {
       "id": 2,
       "name": "Myat Moe Kyaw",
-      "email": "myatmoekyawucsm99@gmail.com",
-      "phone_number": "9961566955",
-      "profile_url": "https://images.pexels.com/photos/4067766/pexels-photo-4067766.jpeg?auto=compress&cs=tinysrgb&w=300",
-      "password": "$2a$10$N2ITTWx2lmh0e3eZYPVk1O7tQiPHwEUbH4SVTnws3UAyxmGViqKL6",
-      "created_at": "2023-12-02T17:10:55.705Z"
+      "email": "myatmoekyawucsm@gmail.com",
+      "phone_number": "09-961566955",
+      "profile_url": "https://images.pexels.com/photos/18412988/pexels-photo-18412988/free-photo-of-blonde-woman-on-gray-background.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "password": "$2a$08$sPbbDmqu9kqdi9.MtvdXNuBnw8XfhNAjs.38iDPVHzqy.pqzc7RBm",
+      "created_at": "2023-12-06T16:55:33.469Z"
     }
   ],
   "posts": [
     {
       "id": 1,
-      "user_id":1,
-      "title":"ajkfakoiaofieoijiajeoi",
-      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-02-02T17:09:55.705Z"
+      "userId": 1,
+      "title": "ajkfakoiaofieoijiajeoi",
+      "body": "jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/4067766/pexels-photo-4067766.jpeg?auto=compress&cs=tinysrgb&w=300",
+      "created_at": "2023-02-02T17:09:55.705Z"
     },
     {
       "id": 2,
-      "user_id":1,
-      "title":"ajkfakoiaofffieoijiajeoi",
-      "body":"ffjjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-03-02T15:09:55.705Z"
+      "userId": 1,
+      "title": "ajkfakoiaofffieoijiajeoi",
+      "body": "ffjjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/4065876/pexels-photo-4065876.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "created_at": "2023-03-02T15:09:55.705Z"
     },
     {
       "id": 3,
-      "user_id":1,
-      "title":"ajkfakoiaofieoijiajeoi",
-      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-03-01T17:09:55.705Z"
+      "userId": 1,
+      "title": "ajkfakoiaofieoijiajeoi",
+      "body": "jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/4067766/pexels-photo-4067766.jpeg?auto=compress&cs=tinysrgb&w=300",
+      "created_at": "2023-03-01T17:09:55.705Z"
     },
     {
       "id": 4,
-      "user_id":2,
-      "title":"ajfakoiaofieoijiajeoi",
-      "body":"jjaofiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-04-09T17:09:58.705Z"
+      "userId": 2,
+      "title": "ajfakoiaofieoijiajeoi",
+      "body": "jjaofiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/4069292/pexels-photo-4069292.jpeg",
+      "created_at": "2023-04-09T17:09:58.705Z"
     },
     {
       "id": 5,
-      "user_id":2,
-      "title":"ajkaofieoijiajeoi",
-      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-03-02T12:09:55.705Z"
+      "userId": 2,
+      "title": "hiie",
+      "body": "jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/4065876/pexels-photo-4065876.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "created_at": "2023-03-02T12:09:55.705Z"
     },
     {
       "id": 6,
-      "user_id":1,
-      "title":"akfakoiaofieoijiajeoi",
-      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-05-02T17:09:55.705Z"
+      "userId": 1,
+      "title": "akfakoiaofieoijiajeoi",
+      "body": "jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/1476321/pexels-photo-1476321.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "created_at": "2023-05-02T17:09:55.705Z"
     },
     {
       "id": 7,
-      "user_id":2,
-      "title":"ajkfakoiaofffieoijiajeoi",
-      "body":"ffjjaofjoi ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-04-02T05:09:55.705Z"
+      "userId": 2,
+      "title": "ajkfakoiaofffieoijiajeoi",
+      "body": "ffjjaofjoi ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/3342739/pexels-photo-3342739.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "created_at": "2023-04-02T05:09:55.705Z"
     },
     {
       "id": 8,
-      "user_id":2,
-      "title":"ofieoijiajeoi",
-      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-04-01T17:11:55.705Z"
+      "userId": 2,
+      "title": "ofieoijiajeoi",
+      "body": "jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/4101555/pexels-photo-4101555.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "created_at": "2023-04-01T17:11:55.705Z"
     },
     {
       "id": 9,
-      "user_id":2,
-      "title":"ajfakoiaofieoijiajeoi",
-      "body":"jjaofiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-06-09T17:09:58.705Z"
+      "userId": 2,
+      "title": "apoloco",
+      "body": "jjaofiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "created_at": "2023-06-09T17:09:58.705Z"
     },
     {
       "id": 10,
-      "user_id":2,
-      "title":"kaofieoijiajeoi",
-      "body":"fjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-05-02T10:09:55.705Z"
+      "userId": 2,
+      "title": "kaofieoijiajeoi",
+      "body": "fjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/1183099/pexels-photo-1183099.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "created_at": "2023-05-02T10:09:55.705Z"
     },
     {
       "id": 11,
-      "user_id":1,
-      "title":"ajkfakoiaofieoijiajeoi",
-      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-02-02T17:09:55.705Z"
+      "userId": 1,
+      "title": "ajkfakoiaofieoijiajeoi",
+      "body": "jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/5795688/pexels-photo-5795688.jpeg?auto=compress&cs=tinysrgb&w=300",
+      "created_at": "2023-02-02T17:09:55.705Z"
     },
     {
       "id": 12,
-      "user_id":1,
-      "title":"ajkfakoiaofffieoijiajeoi",
-      "body":"ffjjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-03-02T15:09:55.705Z"
+      "userId": 1,
+      "title": "ajkfakoiaofffieoijiajeoi",
+      "body": "ffjjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "created_at": "2023-03-02T15:09:55.705Z"
     },
     {
       "id": 13,
-      "user_id":1,
-      "title":"ajkfakoiaofieoijiajeoi",
-      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-03-01T17:09:56.705Z"
+      "userId": 1,
+      "title": "ajkfakoiaofieoijiajeoi",
+      "body": "jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&w=600",
+      "created_at": "2023-03-01T17:09:56.705Z"
     },
     {
       "id": 14,
-      "user_id":2,
-      "title":"ajfakoiaofieoijiajeoi",
-      "body":"jjaofiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-04-09T17:09:58.705Z"
+      "userId": 2,
+      "title": "ajfakoiaofieoijiajeoi",
+      "body": "jjaofiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/1057663/pexels-photo-1057663.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "created_at": "2023-04-09T17:09:58.705Z"
     },
     {
       "id": 15,
-      "user_id":2,
-      "title":"ajkaofieoijiajeoi",
-      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-04-02T12:07:55.705Z"
+      "userId": 2,
+      "title": "weo back aup",
+      "body": "jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/2693529/pexels-photo-2693529.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "created_at": "2023-04-02T12:07:55.705Z"
     },
     {
       "id": 16,
-      "user_id":2,
-      "title":"akfakoiaofieoijiajeoi",
-      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-05-02T17:09:55.705Z"
+      "userId": 2,
+      "title": "akfakoiaofieoijiajeoi",
+      "body": "jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/1435849/pexels-photo-1435849.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "created_at": "2023-05-02T17:09:55.705Z"
     },
     {
       "id": 17,
-      "user_id":2,
-      "title":"ajkfakoiaofffieoijiajeoi",
-      "body":"ffjjaofjoi ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-05-02T05:04:55.705Z"
+      "userId": 2,
+      "title": "ajkfakoiaofffieoijiajeoi",
+      "body": "ffjjaofjoi ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/461940/pexels-photo-461940.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "created_at": "2023-05-02T05:04:55.705Z"
     },
     {
       "id": 18,
-      "user_id":2,
-      "title":"ofieoijiajeoi",
-      "body":"jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-06-01T17:13:55.705Z"
+      "userId": 2,
+      "title": "ofieoijiajeoi",
+      "body": "jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "created_at": "2023-06-01T17:13:55.705Z"
     },
     {
       "id": 19,
-      "user_id":1,
-      "title":"ajfakoiaofieoijiajeoi",
-      "body":"jjaofiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-07-09T17:11:58.705Z"
+      "userId": 1,
+      "title": "ajfakoiaofieoijiajeoi",
+      "body": "jjaofiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/4046710/pexels-photo-4046710.jpeg?auto=compress&cs=tinysrgb&w=300",
+      "created_at": "2023-07-09T17:11:58.705Z"
     },
     {
       "id": 20,
-      "user_id":1,
-      "title":"kaofieoijiajeoi",
-      "body":"fjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "created_at":"2023-05-12T10:09:55.705Z"
+      "userId": 1,
+      "title": "kaofieoijiajeoi",
+      "body": "fjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/6424244/pexels-photo-6424244.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "created_at": "2023-05-12T10:09:55.705Z"
+    },
+    {
+      "id": 21,
+      "userId": 2,
+      "title": "Adventure of my life",
+      "body": "It is fist time of my life and very exciting",
+      "profile_url": "https://images.pexels.com/photos/395196/pexels-photo-395196.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "created_at": "2023-12-05T17:00:31.519Z"
+    },
+    {
+      "id": 22,
+      "userId": 2,
+      "title": "Today is nice day yo",
+      "body": "Weathre is very good and nice to travel here",
+      "profile_url": "https://images.pexels.com/photos/16600108/pexels-photo-16600108/free-photo-of-minimal-background.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "created_at": "2023-12-06T08:34:22.396Z"
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "id": 1,
+      "postId": 22,
+      "userId": 1,
+      "description": "very nice",
+      "created_at": "2023-11-08T17:09:55.705Z"
+    },
+    {
+      "id": 2,
+      "postId": 22,
+      "userId": 2,
+      "description": "like your idea",
+      "created_at": "2023-12-07T08:19:01.407Z"
+    }
+  ]
 }

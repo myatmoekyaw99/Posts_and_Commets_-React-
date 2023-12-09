@@ -1,41 +1,48 @@
-import { NavLink } from "react-router-dom";
-import { Card } from "./FeaturePosts";
-import { BellAlertIcon, BoltIcon, CameraIcon, ChatBubbleBottomCenterTextIcon, ChatBubbleLeftRightIcon, ClipboardDocumentListIcon, LightBulbIcon, MoonIcon, StarIcon, SunIcon } from "@heroicons/react/24/outline";
+import { CameraIcon, ChatBubbleBottomCenterTextIcon, ChatBubbleLeftRightIcon, ClipboardDocumentListIcon, LightBulbIcon, MoonIcon, StarIcon, SunIcon } from "@heroicons/react/24/outline";
+import { useEffect, useState } from "react";
+import axios, { all } from "axios";
+import Loading from "../errors/Loading";
+import { getLoginUser } from "../users/UserProfile";
 
 function AllPosts() {
+    const [allposts,setAllPost] = useState('');
+    const [current_page,setCurrentPage] = useState(1);
+    const [postPerPage, setPostPerPage] = useState(10);
+    
+    useEffect(()=>{
+        axios.get(`http://localhost:3030/posts?_expand=user`)
+        .then(res=>setAllPost(res.data));
+    },[]);
+
+    const lastPostIndex = current_page * postPerPage;
+    const firstPostIndex = lastPostIndex - postPerPage;
+    const currentPosts = allposts.slice(firstPostIndex,lastPostIndex);
+
     return ( 
         <div id="all-post" className="relative pt-10 pb-16 bg-slate-600">
             <TopIconsGroup/>
             <LeftIconsGroup/>
             <RightIconsGroup/>       
             <h1 className="text-center">
-                <span className="pb-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 text-2xl font-extrabold uppercase border-b-2 border-b-orange-400">
+                <span className="z-50 pb-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 text-2xl font-extrabold uppercase border-b-2 border-b-orange-400">
                 All Posts
                 </span>
             </h1>
-            <div className="w-10/12 mx-auto grid grid-cols-4 gap-5 mt-12">
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
+            <div className="w-10/12 mx-auto flex flex-row flex-wrap justify-center gap-5 mt-12">
+            {
+                currentPosts ?
+                currentPosts.map((post,index)=>
+                    <AllCard key={index} pvalue={post}/>
+                )
+                : 
+                <Loading/>
+            }
             </div>
-            <PageNavigatior/>
+           <PageNavigatior totalPosts={allposts.length}
+             postsPerPage={postPerPage} 
+             currentPage={current_page}
+             setCurrentPage={setCurrentPage}
+             />
         </div>
      );
 }
@@ -94,14 +101,61 @@ export function RightIconsGroup(){
     );
 }
 
-export function PageNavigatior(){
+//////////page navigation button component///////////
+export function PageNavigatior({totalPosts,postsPerPage,setCurrentPage,currentPage}){
+    let pages = [];
+
+    const [user,setUser] = useState('');
+
+    useEffect(()=>{
+        setUser(localStorage.getItem('login_user'));
+    },[user]);
+
+    for(let i=1;i<= Math.ceil(totalPosts/postsPerPage);i++){
+        pages.push(i);
+    }
+    
+    const handleClick = (page)=>{
+        user ? setCurrentPage(page)
+        : window.location = '/login';
+    }
     return (
-        <div className="text-center mt-8">
-            <NavLink to="/" className="bg-slate-200 text-black hover:font-bold px-3 py-1 hover:ring-inset ring-1 ring-black">First</NavLink>
-            <NavLink to="/" className="bg-slate-200 text-black hover:font-bold px-3 py-1 hover:ring-inset ring-1 ring-black">Prev</NavLink>
-            <NavLink to="/" className="bg-slate-200 text-blue-900 font-bold hover:bg-white px-5 py-1 hover:ring-inset ring-1 ring-black">1</NavLink>
-            <NavLink to="/" className="bg-slate-200 text-black hover:font-bold px-3 py-1 hover:ring-inset ring-1 ring-black">Next</NavLink>
-            <NavLink to="/" className="bg-slate-200 text-black hover:font-bold px-3 py-1 hover:ring-inset ring-1 ring-black">Last</NavLink>
+        <div className="text-center mt-8">  
+        {
+            pages.map((page,index) =>{
+                return (
+                    <button key={index} className={
+                        page === currentPage ? "ml-2 bg-gray-800 text-blue-600 font-bold px-3 py-1 hover:ring-inset ring-1 ring-white rounded-md"
+                        : "ml-2 bg-slate-200 text-black hover:font-bold px-3 py-1 hover:ring-inset ring-1 ring-black"
+                    } onClick={()=>handleClick(page)}>{page}</button>
+                )
+            })
+        }
         </div>
     );
 }
+
+/////////component for post card///////////
+export function AllCard({pvalue}){
+    // console.log(post);
+    const ctime = new Date(pvalue.created_at);
+    return (
+        <div id="feature-post" className="w-[245px] flex-shrink-0 group snap-start h-auto shadow-black shadow-inner rounded-lg hover:rounded-none overflow-hidden bg-opacity-50 hover:bg-opacity-100 bg-slate-200">
+            <img  className="w-full mb-1 h-40 rounded-t-lg group-hover:rounded-none brightness-75 hover:brightness-100 hover:scale-x-110" src={pvalue.profile_url}/>
+            <h5 className="text-center text-md text-black font-serif font-bold">{pvalue.title}</h5>
+            
+            <div className="flex flex-row content-center align-middle mt-1">
+                <img src={pvalue.user.profile_url} className="w-10 h-10 ml-2 rounded-full inline-block hover:ring-1 ring-slate-400 hover:cursor-pointer"/>
+                <span className="text-black text-md font-serif ml-2">{pvalue.user.name}<span className="text-slate-800 text-xs font-mono block">
+                {ctime.getHours()+':'+ctime.getMinutes()+':'+ctime.getSeconds()}
+                </span></span>
+            </div>
+            
+            <div className="w-full border-t-[1px] mt-1 border-slate-400">
+                <span className="inline-block m-3 text-xs text-gray-800 font-mono">{ctime.getDate()+'-'+ctime.getMonth()+'-'+ctime.getFullYear()}</span>
+                <a href={`posts/${pvalue.id}/detail`} className="m-2 px-5 ring-0 hover:ring-1 ring-inset ring-slate-500 text-slate-800 text-sm hover:font-serif hover:bg-slate-100 rounded-md hover:scale-x-110 float-right">Detail</a>
+            </div>
+        </div> 
+    );
+}
+

@@ -11,7 +11,7 @@ function ErrorPage() {
             <MatrixLtr/>
             <MatrixBtt/>
             <ExclamationTriangleIcon className="fixed top-[30%] left-[48%] w-16 h-10 stroke-1 animate-spin contrast-200 stroke-green-600"/>
-            <div className="relative p-2 w-[30%] animate-bounce border border-green-500 rounded-lg mx-auto my-[228px] text-center text-white font-medium text-lg">
+            <div className="relative p-2 w-[30%] border border-green-500 rounded-lg mx-auto my-[228px] text-center text-white font-medium text-lg">
                 <h1>Oops!</h1>
                 <p>Sorry, an unexpected error has occured</p>
                 <p className="mt-2 bg-clip-text contrast-200 text-green-500 text-sm font-mono"><i>{error.status} {error.statusText || error.message}</i></p>

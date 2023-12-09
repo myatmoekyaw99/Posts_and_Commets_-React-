@@ -3,20 +3,23 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import bcrypt from 'bcryptjs';
+import { useAuth } from "./context/AuthContext";
+import { getLoginUser } from "./UserProfile";
 
 function Login() {
     const initialValue = {email:'',password:''};
+
+    const {login} = useAuth();
+    const navigate = useNavigate();
+    const [users,setUsers] = useState([]);
+    const [formData,setFormData] = useState(initialValue);
+    const [isSubmit,setIsSubmit] = useState(false);
 
     useEffect(()=>{
         axios.get('http://localhost:3030/users').then((res) =>{
             setUsers(res.data);
         })
     },[]);
-
-    const navigate = useNavigate();
-    const [users,setUsers] = useState([]);
-    const [formData,setFormData] = useState(initialValue);
-    const [isSubmit,setIsSubmit] = useState(false);
 
     const handleChange = (e)=>{
         const {name,value} = e.target;
@@ -28,16 +31,23 @@ function Login() {
 
         setIsSubmit(true);
         const user = users.filter((user) =>
-            formData.email === user.email );
+            formData.email === user.email
+         );
+        console.log(user[0]);
 
-        ///to match password///
-        if(bcrypt.compareSync(formData.password,user[0].password)){
-            localStorage.setItem('login_user',JSON.stringify(user[0]));
-            setIsSubmit(false);
-            alert('Login successful!')
-            navigate('/');
+        if(user[0].password){
+            ///to match password///
+            if(bcrypt.compareSync(formData.password,user[0].password)){
+                login(user[0]);
+                localStorage.setItem('login_user',JSON.stringify(user[0]));
+                setIsSubmit(false);
+                alert('Login successful!');
+                navigate('/');
+            }else{
+                alert("Password doesn't match");
+            }
         }else{
-            alert("Password doesn't match");
+            alert("Email does not match.User not found!");
         }
         
     }

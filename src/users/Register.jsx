@@ -21,7 +21,7 @@ function Register() {
 
         if(formData.name !== '' && formData.email !== '' && formData.phone !== '' && formData.profile !== ''){
             if(formData.password === formData.confirmPassword && formData.password !== ''){
-                createPost(formData);
+                createUser(formData);
                 setFormData(initialValue);
             }else{
                 setIsSubmit(false);
@@ -37,15 +37,14 @@ function Register() {
     return (  
         <>
             <div className="relative">
-            <span className="inline-block" onClick={()=>{navigate(-1)}}>
-            <ArrowLeftOnRectangleIcon className="w-10 h-8 text-white mt-3 ml-5 hover:scale-110"/>
-            </span>
-            {/* <span className="absolute top-1 right-2 mb-2 text-white">Already have an account?</span> */}
-            <a href="/login" className="absolute top-5 inline-block right-12 p-2 rounded-xl text-gray-400 font-bold ring-2 ring-gray-800 shadow-md shadow-gray-700  hover:ring-gray-900 hover:text-gray-300">Login Here</a>
+                <span className="inline-block" onClick={()=>{navigate(-1)}}>
+                <ArrowLeftOnRectangleIcon className="w-10 h-8 text-white mt-3 ml-5 hover:scale-110"/>
+                </span>
+                {/* <span className="absolute top-1 right-2 mb-2 text-white">Already have an account?</span> */}
+                <a href="/login" className="absolute top-5 inline-block right-12 p-2 rounded-xl text-gray-400 font-bold ring-2 ring-gray-800 shadow-md shadow-gray-700  hover:ring-gray-900 hover:text-gray-300">Login Here</a>
             </div>
             <h1 className="text-center text-white text-2xl bg-clip-text contrast-200 font-bold">Registration</h1>
             <div className="bg-blue-500 p-5 mb-4 outline-none ring-1 ring-gray-500 rounded-2xl shadow-inner shadow-black  w-[40%] mt-2 mx-auto hover:ring-2">
-
                 <form method="post" className="w-[80%] mx-auto flex flex-col" onSubmit={(e)=>handleSubmit(e)}>
                         <label className="block ml-2 font-bold text-white" htmlFor="name">Name :</label>
                          <input type="text" name="name" id="name" className="bg-white text-blue-600 p-2 mb-2 outline-none ring-1 ring-gray-100 rounded-2xl shadow-inner shadow-gray-800 " placeholder="Enter your name" value={formData.name} onChange={handleChange}/>
@@ -107,14 +106,14 @@ function Register() {
 
 export default Register;
 
-export async function createPost(formData){
+export async function createUser(formData){
     const res = await axios.post('http://localhost:3030/users',{
             id:'',
             name:formData.name,
             email: formData.email,
             phone_number: formData.phone,
             profile_url:formData.profile,
-            password: bcrypt.hashSync(formData.password),
+            password: bcrypt.hashSync(formData.password,8),
             created_at: new Date(),
         }
     ).then(res => {

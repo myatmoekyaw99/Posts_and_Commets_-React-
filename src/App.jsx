@@ -12,33 +12,26 @@ import Profile from './layout/Profile';
 import UserProfile from './users/UserProfile';
 import ProfilePosts from './posts/ProfilePosts';
 import ProfileErrorPage from './errors/ProfileErrorPage';
+import CreatePost from './posts/CreatePost';
+import EditPost from './posts/EditPost';
+import EditUser from './users/EditUser';
+import { AuthProvider } from './users/context/AuthContext';
+import ProtectedRoute from './protect/ProtectedRoute';
 
 function App() {
-
-  // const [posts,setPosts] = useState([]);
-  // useEffect(()=>{
-  //   axios.get('http://localhost:3030/posts').then((response) => {
-  //       setPosts(response.data);
-  //   });
-  // },[]);
-
-  // console.log(posts);
 
   const router = createBrowserRouter([
     {
       path:"/",
       element:<Root/>,
       errorElement:<ErrorPage/>,
-      loader: async ({ params }) => {
-        return axios.get('http://localhost:3030/posts').then((response) => response.data);
-      },
       children:[
         {
-          errorElement:<ErrorPage/>,
+          // errorElement:<ErrorPage/>,
           children:[
             { index: true, element: <HomePage/> },
             {
-              path:"detail/:id",
+              path:"posts/:post_id/detail",
               element:<Detail/>,
             },
             {
@@ -51,7 +44,7 @@ function App() {
             },
             {
               path:"profile",
-              element:<Profile/>,
+              element:<ProtectedRoute><Profile/></ProtectedRoute>,
               errorElement:<ProfileErrorPage/>,
               children:[
                 {
@@ -60,8 +53,24 @@ function App() {
                     { index: true, element: <UserProfile/> },
                     {
                       path:"posts",
-                      element:<ProfilePosts/>
-                    }
+                      element:<ProfilePosts/>,
+                    },
+                    {
+                      path:":user_id/edit",
+                      element:<EditUser/>,
+                    },
+                    {
+                      path:"create",
+                      element:<CreatePost/>,
+                    },
+                    {
+                      path:"posts/:postId/edit",
+                      element:<EditPost/>,
+                    },
+                    {
+                      path:"posts/:post_id/detail",
+                      element:<Detail/>,
+                    },
                   ],
                 },
               ],
@@ -73,10 +82,10 @@ function App() {
   ]);
   
   return (
-    <>
+    <AuthProvider>
       <RouterProvider router={router}>
       </RouterProvider>
-    </>   
+    </AuthProvider>   
   )
 }
 
