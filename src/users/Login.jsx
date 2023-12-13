@@ -1,16 +1,16 @@
 import { ArrowLeftOnRectangleIcon } from "@heroicons/react/24/outline";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import bcrypt from 'bcryptjs';
-import { useAuth } from "./context/AuthContext";
-import { getLoginUser } from "./UserProfile";
+import { AuthContext } from "./context/AuthContext";
+
 
 function Login() {
     const initialValue = {email:'',password:''};
 
-    const {login} = useAuth();
     const navigate = useNavigate();
+    const {user,login} = useContext(AuthContext);
     const [users,setUsers] = useState([]);
     const [formData,setFormData] = useState(initialValue);
     const [isSubmit,setIsSubmit] = useState(false);
@@ -30,19 +30,19 @@ function Login() {
         e.preventDefault();
 
         setIsSubmit(true);
-        const user = users.filter((user) =>
+        const user_val = users.filter((user) =>
             formData.email === user.email
          );
-        console.log(user[0]);
+        // console.log(user[0]);
 
-        if(user[0].password){
+        if(user_val[0].password){
             ///to match password///
-            if(bcrypt.compareSync(formData.password,user[0].password)){
-                login(user[0]);
-                localStorage.setItem('login_user',JSON.stringify(user[0]));
+            if(bcrypt.compareSync(formData.password,user_val[0].password)){
+                localStorage.setItem('login_user',JSON.stringify(user_val[0]));
+                login(1);  
                 setIsSubmit(false);
                 alert('Login successful!');
-                navigate('/');
+                navigate(-1);
             }else{
                 alert("Password doesn't match");
             }

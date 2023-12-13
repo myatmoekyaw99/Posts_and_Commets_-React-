@@ -1,11 +1,10 @@
 import Navbar from "./Navbar";
 import axios from "axios";
-import { Outlet, useLoaderData } from "react-router-dom";
+import { Outlet, useLoaderData, useLocation, useNavigate } from "react-router-dom";
 
 function Root() {
-    const curr_path = window.location.pathname ;
-
-    const posts_arr = useLoaderData();
+    const location = useLocation();
+    const curr_path = location.pathname ;
     
     return (
         <>

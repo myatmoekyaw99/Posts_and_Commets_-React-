@@ -1,22 +1,23 @@
-import React, { Children, useContext, useState } from "react";
+import React, { useContext, useMemo, useState } from "react";
+import { getLoginUser } from "../UserProfile";
 
-const AuthContext = React.createContext();
+export const AuthContext = React.createContext();
 
 export const AuthProvider=({children}) => {
 
-    const [user,setUser] = useState('');
-
-    const login=(data) =>{setUser(data)};
-
-    const logout = () => {setUser(null)};
+    const login_user = getLoginUser();
+    const [user,setUser] = useState(login_user ? 1 : 0);
+    const login = (data) =>{ setUser(data)};
+    const logout = ()=>{setUser(null)};
     
+    console.log(user);
     return ( 
-        <AuthContext.Provider value={{user,setUser,login,logout}}>
-            {children}
+        <AuthContext.Provider value={{user,login,logout}}>
+               {children}
         </AuthContext.Provider>
      );
 }
 
-export const useAuth = ()=>{
-    return useContext(AuthContext);
-};
+// export const useAuth = ()=>{
+//     return useContext(AuthContext);
+// };

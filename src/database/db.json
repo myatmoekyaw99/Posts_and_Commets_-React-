@@ -150,11 +150,11 @@
     },
     {
       "id": 17,
-      "userId": 2,
-      "title": "ajkfakoiaofffieoijiajeoi",
-      "body": "ffjjaofjoi ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
-      "profile_url": "https://images.pexels.com/photos/461940/pexels-photo-461940.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "created_at": "2023-05-02T05:04:55.705Z"
+      "userId": 1,
+      "title": "oiaofieoiji ajeoi",
+      "body": "jjaofjoiajijteorj ijijrijrijg ejeij rijgijgojtegn g gojgijgijrej jjei",
+      "profile_url": "https://images.pexels.com/photos/1435849/pexels-photo-1435849.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "created_at": "2023-05-02T17:12:55.705Z"
     },
     {
       "id": 18,
@@ -191,26 +191,40 @@
     {
       "id": 22,
       "userId": 2,
-      "title": "Today is nice day yo",
-      "body": "Weathre is very good and nice to travel here",
+      "title": "Hello December",
+      "body": "hello again",
       "profile_url": "https://images.pexels.com/photos/16600108/pexels-photo-16600108/free-photo-of-minimal-background.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "created_at": "2023-12-06T08:34:22.396Z"
+      "created_at": "2023-12-12T08:57:56.115Z"
     }
   ],
   "comments": [
     {
       "id": 1,
-      "postId": 22,
-      "userId": 1,
-      "description": "very nice",
-      "created_at": "2023-11-08T17:09:55.705Z"
+      "postId": "21",
+      "userId": 2,
+      "description": "hello",
+      "created_at": "2023-12-12T08:57:34.561Z"
     },
     {
       "id": 2,
-      "postId": 22,
+      "postId": "22",
       "userId": 2,
-      "description": "like your idea",
-      "created_at": "2023-12-07T08:19:01.407Z"
+      "description": "nice ",
+      "created_at": "2023-12-12T08:58:16.046Z"
+    },
+    {
+      "id": 3,
+      "postId": "22",
+      "userId": 1,
+      "description": "Goat",
+      "created_at": "2023-12-12T02:58:16.046Z"
+    },
+    {
+      "id": 4,
+      "postId": "20",
+      "userId": 1,
+      "description": "hello",
+      "created_at": "2023-12-12T05:03:16.046Z"
     }
   ]
 }

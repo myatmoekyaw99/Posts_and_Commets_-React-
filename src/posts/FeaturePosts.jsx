@@ -44,8 +44,8 @@ export function Card({pvalue}){
             
             <div className="flex flex-row content-center align-middle mt-1">
                 <img src={pvalue.user.profile_url} className="w-10 h-10 ml-2 rounded-full inline-block hover:ring-1 ring-slate-400 hover:cursor-pointer"/>
-                <span className="text-black text-md font-serif ml-2">{pvalue.user.name}<span className="text-slate-800 text-xs font-mono block">
-                {ctime.getHours()+':'+ctime.getMinutes()+':'+ctime.getSeconds()}
+                <span className="text-black text-md font-serif ml-2">{pvalue.user.name}<span className="text-slate-800 text-[10px] font-mono block">
+                {  ctime.getHours() > 12 ? ctime.getHours()-12 : ctime.getHours() }:{ctime.getMinutes()+':'+ctime.getSeconds()} {ctime.getHours() >12 ? 'pm' : 'am'}
                 </span></span>
             </div>
             

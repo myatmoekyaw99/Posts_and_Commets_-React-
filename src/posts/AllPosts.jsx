@@ -3,11 +3,12 @@ import { useEffect, useState } from "react";
 import axios, { all } from "axios";
 import Loading from "../errors/Loading";
 import { getLoginUser } from "../users/UserProfile";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function AllPosts() {
     const [allposts,setAllPost] = useState('');
     const [current_page,setCurrentPage] = useState(1);
-    const [postPerPage, setPostPerPage] = useState(10);
+    const [postPerPage, setPostPerPage] = useState(20);
     
     useEffect(()=>{
         axios.get(`http://localhost:3030/posts?_expand=user`)
@@ -106,6 +107,7 @@ export function PageNavigatior({totalPosts,postsPerPage,setCurrentPage,currentPa
     let pages = [];
 
     const [user,setUser] = useState('');
+    const navigator = useNavigate();
 
     useEffect(()=>{
         setUser(localStorage.getItem('login_user'));
@@ -116,8 +118,13 @@ export function PageNavigatior({totalPosts,postsPerPage,setCurrentPage,currentPa
     }
     
     const handleClick = (page)=>{
-        user ? setCurrentPage(page)
-        : window.location = '/login';
+        if(page !== 1){
+            user ? setCurrentPage(page)
+            : navigator('/login');
+        }else{
+            setCurrentPage(1);
+        }
+        
     }
     return (
         <div className="text-center mt-8">  
@@ -125,8 +132,8 @@ export function PageNavigatior({totalPosts,postsPerPage,setCurrentPage,currentPa
             pages.map((page,index) =>{
                 return (
                     <button key={index} className={
-                        page === currentPage ? "ml-2 bg-gray-800 text-blue-600 font-bold px-3 py-1 hover:ring-inset ring-1 ring-white rounded-md"
-                        : "ml-2 bg-slate-200 text-black hover:font-bold px-3 py-1 hover:ring-inset ring-1 ring-black"
+                        page === currentPage ? "ml-2 bg-gray-800 text-blue-600 font-bold px-3 py-1 hover:ring-inset ring-1 ring-white border-2 border-black rounded-md"
+                        : "ml-2 bg-slate-200 text-black hover:font-bold px-3 py-1 hover:ring-inset ring-1 ring-black border-2 border-white rounded-md"
                     } onClick={()=>handleClick(page)}>{page}</button>
                 )
             })
@@ -146,8 +153,8 @@ export function AllCard({pvalue}){
             
             <div className="flex flex-row content-center align-middle mt-1">
                 <img src={pvalue.user.profile_url} className="w-10 h-10 ml-2 rounded-full inline-block hover:ring-1 ring-slate-400 hover:cursor-pointer"/>
-                <span className="text-black text-md font-serif ml-2">{pvalue.user.name}<span className="text-slate-800 text-xs font-mono block">
-                {ctime.getHours()+':'+ctime.getMinutes()+':'+ctime.getSeconds()}
+                <span className="text-black text-md font-serif ml-2">{pvalue.user.name}<span className="text-slate-800 text-[10px] font-mono block">
+                {  ctime.getHours() > 12 ? ctime.getHours()-12 : ctime.getHours() }:{ctime.getMinutes()+':'+ctime.getSeconds()} {ctime.getHours() >12 ? 'pm' : 'am'}
                 </span></span>
             </div>
             
