@@ -39,9 +39,9 @@ function CommentSection({post_id}) {
     }
 
     return ( 
-        <div className="basis-1/3 flex flex-col mt-2 mr-1 rounded-sm border-l border-l-gray-800">
-            <h1 className="sticky top-0 z-50 p-2 text-gray-400 border-b border-b-gray-400 bg-gray-800">{comments.length} Comments</h1>
-            <div className="w-full h-full bg-gray-800 overflow-y-scroll no-scrollbar">
+        <div className="md:basis-1/3 flex flex-col mt-2 ml-2 mr-1 rounded-sm border-l border-l-gray-500 rounded-t-lg">
+            <h1 className="sticky top-0 z-40 p-2 text-gray-400 border-b border-b-gray-400 bg-gray-800 rounded-t-lg">{comments.length} Comments</h1>
+            <div className="w-full max-sm:h-[200px] sm:h-[300px] md:h-full bg-gray-800 overflow-y-scroll no-scrollbar">
             {
             comments ?
             comments.map((comment,index)=>

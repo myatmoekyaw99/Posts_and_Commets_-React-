@@ -25,7 +25,7 @@ function AllPosts() {
             <LeftIconsGroup/>
             <RightIconsGroup/>       
             <h1 className="text-center">
-                <span className="z-50 pb-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 text-2xl font-extrabold uppercase border-b-2 border-b-orange-400">
+                <span className="z-50 pb-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 sm:text-2xl font-extrabold uppercase border-b-2 border-b-orange-400">
                 All Posts
                 </span>
             </h1>
@@ -53,7 +53,7 @@ export default AllPosts;
 //////background icons top side/////
 export function TopIconsGroup(){
     return (
-        <div className="group" id="top-group-icons">
+        <div className="max-lg:hidden group" id="top-group-icons">
             <StarIcon className="absolute w-12 h-10 top-16 left-[300px] stroke-[0.5px] stroke-white group-hover:stroke-[1px]"/>
             <MoonIcon className="absolute top-5 left-[450px] h-14  w-14 stroke-[0.5px] stroke-white group-hover:stroke-blue-500"/>
             <MoonIcon className="absolute top-8 right-[280px] h-14  w-12 stroke-[0.5px] stroke-white group-hover:stroke-blue-600"/>
@@ -65,7 +65,7 @@ export function TopIconsGroup(){
 //////background icons left side/////
 export function LeftIconsGroup(){
     return (
-        <div className="group" id="left-group-icons">
+        <div className="max-[420px]:hidden group" id="left-group-icons">
             <ChatBubbleBottomCenterTextIcon className="absolute top-5 left-4 h-24 w-24 stroke-[0.2px] hover:stroke-[0.6px] stroke-cyan-500 group-hover:stroke-blue-500"/>
             <MoonIcon className="absolute w-12 h-10 top-4 left-36 stroke-[0.6px] stroke-blue-400 group-hover:stroke-white"/>
             <StarIcon className="absolute bottom-4 left-32 h-14  w-14 stroke-[0.5px] stroke-white group-hover:stroke-blue-600"/>
@@ -85,7 +85,7 @@ export function LeftIconsGroup(){
 //////background icons right side/////
 export function RightIconsGroup(){
     return (
-        <div className="group" id="right-group-icons">
+        <div className="max-[420px]:hidden group" id="right-group-icons">
             <ChatBubbleLeftRightIcon className="absolute top-5 right-4 h-24  w-24 stroke-[0.2px] hover:stroke-[0.6px] stroke-orange-300 group-hover:stroke-orange-500"/>
             <MoonIcon className="absolute w-12 h-10 top-4 right-36 stroke-[0.5px] stroke-white group-hover:stroke-blue-600"/>
             <StarIcon className="absolute bottom-4 right-32 h-14  w-14 stroke-[0.5px] stroke-white group-hover:stroke-blue-600"/>

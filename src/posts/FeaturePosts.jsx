@@ -18,7 +18,7 @@ export default function FeaturePosts(){
 
     return (
         <div id="feature-posts" className="w-screen h-[450px] py-10 bg-slate-100 overflow-auto">
-            <h1 className="text-center"><span className="pb-2 bg-clip-text text-blue-800 text-2xl font-bold uppercase border-b-2 border-b-blue-800 hover:border-b-slate-800">Feature Posts</span></h1>
+            <h1 className="text-center"><span className="pb-2 bg-clip-text text-blue-800 sm:text-2xl font-bold uppercase border-b-2 border-b-blue-800 hover:border-b-slate-800">Feature Posts</span></h1>
             <div className="w-[93%] h-[280px] mx-auto flex gap-2 snap-x snap-mandatory overflow-scroll no-scrollbar mt-10 my-1">
             {
                 posts ?
@@ -38,7 +38,7 @@ export function Card({pvalue}){
     // console.log(post);
     const ctime = new Date(pvalue.created_at);
     return (
-        <div id="feature-post" className="w-[245px] flex-shrink-0 group snap-start h-auto shadow-black shadow-inner rounded-lg hover:rounded-none overflow-hidden bg-opacity-50 hover:bg-opacity-100 bg-slate-200">
+        <div id="feature-post" className="w-[245px] flex-shrink-0 group snap-center md:snap-start h-auto shadow-black shadow-inner rounded-lg hover:rounded-none overflow-hidden bg-opacity-50 hover:bg-opacity-100 bg-slate-200">
             <img  className="w-full mb-1 h-40 rounded-t-lg group-hover:rounded-none brightness-75 hover:brightness-100 hover:scale-x-110" src={pvalue.profile_url}/>
             <h5 className="text-center text-md text-black font-serif font-bold">{pvalue.title}</h5>
             

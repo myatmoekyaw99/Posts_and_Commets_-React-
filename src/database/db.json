@@ -187,14 +187,6 @@
       "body": "It is fist time of my life and very exciting",
       "profile_url": "https://images.pexels.com/photos/395196/pexels-photo-395196.jpeg?auto=compress&cs=tinysrgb&w=600",
       "created_at": "2023-12-05T17:00:31.519Z"
-    },
-    {
-      "id": 22,
-      "userId": 2,
-      "title": "Hello December",
-      "body": "hello again",
-      "profile_url": "https://images.pexels.com/photos/16600108/pexels-photo-16600108/free-photo-of-minimal-background.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "created_at": "2023-12-12T08:57:56.115Z"
     }
   ],
   "comments": [
@@ -204,20 +196,6 @@
       "userId": 2,
       "description": "hello",
       "created_at": "2023-12-12T08:57:34.561Z"
-    },
-    {
-      "id": 2,
-      "postId": "22",
-      "userId": 2,
-      "description": "nice ",
-      "created_at": "2023-12-12T08:58:16.046Z"
-    },
-    {
-      "id": 3,
-      "postId": "22",
-      "userId": 1,
-      "description": "Goat",
-      "created_at": "2023-12-12T02:58:16.046Z"
     },
     {
       "id": 4,

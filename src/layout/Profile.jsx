@@ -8,7 +8,7 @@ function Profile() {
     const {user} = useContext(AuthContext);
     console.log(user);
     return ( 
-            <div className="w-full max-[800px]:h-[86vh] h-[89.5vh] lg:h-[91.8vh] flex flex-row gap-0 bg-gray-900 text-white">
+            <div className="w-full h-auto md:h-[89vh] lg:h-[91vh] flex flex-row gap-0 bg-gray-900 text-white">
                 <SideBar/>
                 <Outlet/>
             </div>
@@ -27,7 +27,7 @@ export function SideBar(){
                 <SideBarLink url={"/profile/create"} icon={<PlusCircleIcon className="w-6 h-6 inline-block"></PlusCircleIcon>} name={"Post Create"}/>
             </ul>
 
-            <p className="fixed max-md:hidden lg:left-6 bottom-0 mb-3 text-[11px] lg:text-sm text-gray-400">Copyright<sup className="text-blue-500 text-sm font-bold animate-ping">&copy;</sup> @OurBlog.com</p>
+            <p className="fixed max-md:hidden lg:left-2 bottom-0 mb-3 text-[10px] lg:text-sm text-gray-400">Copyright<sup className="text-blue-500 text-sm font-bold animate-ping">&copy;</sup> @OurBlog.com</p>
         </div>
     );
 }

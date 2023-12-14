@@ -6,8 +6,10 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const login_user = getLoginUser();
+
 function ProfilePosts() {
 
+    const login_user = getLoginUser();
     const [posts,setPosts] = useState();
 
     useEffect(()=>{
@@ -20,7 +22,7 @@ function ProfilePosts() {
     console.log(posts);
 
     return ( 
-        <div className="md:w-[50%] lg:w-[35%] h-[85vh] lg:h-[90vh] mx-auto p-2 snap-y snap-mandatory overflow-y-scroll no-scrollbar">
+        <div className="md:w-[45%] lg:w-[35%] h-[85vh] lg:h-[90vh] mx-auto p-2 snap-y snap-mandatory overflow-y-scroll no-scrollbar">
             {
                 posts ?
                 posts.map((post)=>

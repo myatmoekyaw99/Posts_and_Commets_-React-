@@ -42,7 +42,7 @@ function Login() {
                 login(1);  
                 setIsSubmit(false);
                 alert('Login successful!');
-                navigate(-1);
+                navigate('/');
             }else{
                 alert("Password doesn't match");
             }
@@ -55,11 +55,11 @@ function Login() {
     return ( 
         <>
             <span className="inline-block" onClick={()=>{navigate('/')}}>
-            <ArrowLeftOnRectangleIcon className="w-10 h-8 text-white mt-3 ml-5 hover:scale-110"/>
+            <ArrowLeftOnRectangleIcon className="w-6 sm:w-10 h-5 sm:h-8 text-white mt-3 ml-5 hover:scale-110"/>
             </span>
-            <h1 className="mt-10 text-center text-blue-500 text-3xl contrast-200 font-bold">Login</h1>
-            <div className=" w-[40%] mt-2 mx-auto bg-gray-100 p-5 mb-4 outline-none rounded-2xl shadow-inner shadow-black border border-gray-200 hover:bg-white">
-                <form onSubmit={(e)=>handleSubmit(e)} className="w-[60%] mx-auto flex flex-col">
+            <h1 className="mt-7 sm:mt-10 text-center text-blue-500 text-xl sm:text-3xl contrast-200 font-bold">Login</h1>
+            <div className="max-[430px]:w-[70%] max-sm:w-[50%] sm:w-[40%] mt-2 mx-auto bg-gray-100 p-5 mb-4 outline-none rounded-2xl shadow-inner shadow-black border border-gray-200 hover:bg-white">
+                <form onSubmit={(e)=>handleSubmit(e)} className="sm:w-[60%] mx-auto flex flex-col">
         
                         <label className="block ml-2 font-bold text-blue-500" htmlFor="email">Email :</label>
                          <input type="email" name="email" id="email" value={formData.email} onChange={(e)=>handleChange(e)} className="bg-slate-200 text-blue-500 p-2 mb-2 outline-none ring-1 ring-gray-100 rounded-2xl shadow-inner shadow-gray-400 " placeholder="Enter your email"/>
@@ -75,7 +75,7 @@ function Login() {
                           : ''
                         }
 
-                        <input type="submit" name="submit" id="submit" className="w-[50%] mx-auto mt-3 rounded-full p-2 font-bold font-serif bg-blue-500 cursor-pointer text-white hover:bg-black" value="LOGIN"/>
+                        <input type="submit" name="submit" id="submit" className="sm:w-[50%] mx-auto mt-3 rounded-full p-1 max-sm:px-2 sm:p-2 max-[530px]:text-sm md:font-bold font-serif bg-blue-500 cursor-pointer text-white hover:bg-black" value="LOGIN"/>
                     </form>
             </div>
         </>       
